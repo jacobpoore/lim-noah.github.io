@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add any global styles here */
+html.dark {
+  color-scheme: dark;
+}
+
+/* Custom scrollbar for a more themed look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ocean-deep); /* Dark track in dark mode */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ocean-light); /* Ocean blue thumb */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wave-blue); /* Lighter blue on hover */
+}
+
+/* Fallback for light mode */
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: var(--sky-blue); /* Light track in light mode */
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: var(--ocean-light); /* Ocean blue thumb */
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: var(--wave-blue); /* Lighter blue on hover */
+}
+
+/* Define CSS variables for colors for scrollbar theming */
+:root {
+  --ocean-deep: #001f3f;
+  --ocean-light: #007bff;
+  --sky-blue: #add8e6;
+  --wave-blue: #6495ed;
+}
+
+

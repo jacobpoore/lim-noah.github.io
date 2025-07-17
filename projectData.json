@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "Project 1 Title Here",
+    "slug": "project-1-title-here",
+    "description": "A summary about the project would be here. This could describe the engineering challenge, mathematical modeling approach, or technical solution developed.",
+    "category": "engineering",
+    "status": "Completed",
+    "technologies": ["MATLAB", "Python", "SolidWorks", "Arduino"],
+    "duration": "X months",
+    "team": "Solo Project",
+    "links": {
+      "repository": "https://github.com/username/project-1"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Project 2 Title Here",
+    "slug": "project-2-title-here",
+    "description": "A summary about the project would be here. This could describe the engineering challenge, mathematical modeling approach, or technical solution developed.",
+    "category": "mathematics",
+    "status": "In Progress",
+    "technologies": ["Python", "MATLAB", "CAD"],
+    "duration": "X months",
+    "team": "Team Project",
+    "links": {
+      "demo": "https://example-demo.com",
+      "repository": "https://github.com/username/project-2"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Project 3 Title Here",
+    "slug": "project-3-title-here",
+    "description": "A summary about the project would be here. This could describe the engineering challenge, mathematical modeling approach, or technical solution developed.",
+    "category": "research",
+    "status": "Completed",
+    "technologies": ["MATLAB", "Python", "Data Analysis"],
+    "duration": "X months",
+    "team": "Solo Project",
+    "links": {
+      "repository": "https://github.com/username/project-3"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Project 4 Title Here",
+    "slug": "project-4-title-here",
+    "description": "A summary about the project would be here. This could describe the engineering challenge, mathematical modeling approach, or technical solution developed.",
+    "category": "engineering",
+    "status": "Planning",
+    "technologies": ["Arduino", "SolidWorks", "Python"],
+    "duration": "X months",
+    "team": "Team Project",
+    "links": {
+      "repository": "https://github.com/username/project-4"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Project 5 Title Here",
+    "slug": "project-5-title-here",
+    "description": "A summary about the project would be here. This could describe the engineering challenge, mathematical modeling approach, or technical solution developed.",
+    "category": "mathematics",
+    "status": "Completed",
+    "technologies": ["MATLAB", "Mathematical Modeling", "Python"],
+    "duration": "X months",
+    "team": "Solo Project",
+    "links": {
+      "repository": "https://github.com/username/project-5"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Project 6 Title Here",
+    "slug": "project-6-title-here",
+    "description": "A summary about the project would be here. This could describe the engineering challenge, mathematical modeling approach, or technical solution developed.",
+    "category": "engineering",
+    "status": "Completed",
+    "technologies": ["SolidWorks", "CAD", "Arduino", "Python"],
+    "duration": "X months",
+    "team": "Solo Project",
+    "links": {
+      "repository": "https://github.com/username/project-6"
+    }
+  }
+]

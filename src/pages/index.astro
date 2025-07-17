@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectTable from '../components/ProjectTable.jsx';
+import projectData from '../../projectData.json';
+
+const projectBaseUrl = '/projects/';
+---
+
+<Layout currentPage="home" title="Ocean Engineering & Applied Math">
+  <!-- Hero Banner -->
+  <section class="relative bg-gradient-to-br from-sky-blue to-seafoam dark:from-ocean-deep dark:to-ocean-mid min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+    <img
+      src="/placeholder.svg?height=1000&width=1920"
+      alt="Ocean waves background"
+      class="absolute inset-0 z-0 w-full h-full object-cover opacity-20"
+    />
+    <div class="relative z-10 text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-ocean-deep dark:text-shell-white mb-6 drop-shadow-lg">
+        Navigating the Deep with Math & Engineering
+      </h1>
+      <p class="text-xl md:text-2xl text-ocean-mid dark:text-wave-blue mb-8 max-w-2xl mx-auto">
+        Integrating mathematics, technology, and ocean systems to solve real-world problems beneath the waves.
+      </p>
+
+      <div class="inline-flex items-center bg-seafoam/50 dark:bg-lagoon/30 text-lagoon dark:text-seafoam px-4 py-2 rounded-full text-sm font-medium mb-8 shadow-md">
+        <span class="w-2 h-2 bg-coral-green rounded-full mr-2 animate-pulse"></span>
+        Junior at Wesleyan | Engineer at Makai Ocean Engineering
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#projects" class="bg-ocean-light hover:bg-wave-blue text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-transform transform hover:scale-105">
+          Explore Projects
+        </a>
+        <a href="#about" class="bg-shell-white dark:bg-ocean-mid border border-wave-blue text-ocean-deep dark:text-shell-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-transform transform hover:scale-105">
+          Learn About Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-20 bg-gradient-to-br from-sky-blue/50 to-wave-blue/50 dark:from-ocean-mid/50 dark:to-ocean-deep/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-ocean-deep dark:text-shell-white mb-4">About My Journey</h2>
+        <p class="text-lg text-ocean-mid dark:text-wave-blue">
+          I’m a mathematics student and ocean engineer developing tools and models for the marine environment. I explore how algorithms, design, and fluid dynamics come together to tackle subsea challenges. My passion lies in the intersection of the deep blue and innovative solutions.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-4 text-ocean-mid dark:text-wave-blue">
+          <p><strong>Ocean Modeling</strong> – Simulation of wave and current systems using MATLAB and Python, bringing the ocean's dynamics to life through code.</p>
+          <p><strong>Marine Tech Design</strong> – Hands-on engineering with subsea cables, robust structures, and embedded systems, crafting solutions for the harsh marine frontier.</p>
+          <p><strong>Applied Math</strong> – Leveraging tools like differential equations and numerical analysis to drive innovation and solve complex problems in challenging aquatic environments.</p>
+        </div>
+        <div class="relative w-full max-w-md mx-auto aspect-video rounded-lg shadow-xl overflow-hidden">
+          <img src="/placeholder.svg?height=400&width=600" alt="Engineering diagram or ocean scene" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Experience -->
+  <section class="py-20 bg-gradient-to-br from-seafoam/50 to-sky-blue/50 dark:from-ocean-mid/70 dark:to-ocean-deep/70">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-shell-white dark:bg-ocean-deep rounded-xl p-6 shadow-lg border border-sky-blue/50 dark:border-ocean-mid">
+          <h3 class="text-2xl font-semibold text-ocean-deep dark:text-shell-white mb-4">Technical Skills</h3>
+          <ul class="list-disc list-inside text-ocean-mid dark:text-wave-blue space-y-2">
+            <li>MATLAB for fluid dynamics & modeling</li>
+            <li>Python for automation and data visualization</li>
+            <li>Arduino & embedded systems for marine sensing</li>
+            <li>CAD/SolidWorks for subsea hardware design</li>
+          </ul>
+        </div>
+        <div class="bg-shell-white dark:bg-ocean-deep rounded-xl p-6 shadow-lg border border-sky-blue/50 dark:border-ocean-mid">
+          <h3 class="text-2xl font-semibold text-ocean-deep dark:text-shell-white mb-4">Experience</h3>
+          <p class="text-ocean-mid dark:text-wave-blue mb-2"><strong>Makai Ocean Engineering</strong> – Contributing to subsea cable modeling and offshore deployment plans, navigating the complexities of deep-sea infrastructure.</p>
+          <p class="text-ocean-mid dark:text-wave-blue"><strong>Wesleyan University</strong> – Pursuing a B.A. in Mathematics with applied coursework in differential equations, mechanics, and environmental modeling, building a strong theoretical foundation for practical applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Portfolio -->
+  <section id="projects" class="py-20 bg-gradient-to-br from-sky-blue to-wave-blue dark:from-ocean-deep dark:to-ocean-mid">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-ocean-deep dark:text-shell-white mb-4">Featured Voyages (Projects)</h2>
+        <p class="text-lg text-ocean-mid dark:text-wave-blue">
+          Explore technical documentation, modeling visuals, and prototypes developed during academic and professional work, charting a course through innovation.
+        </p>
+      </div>
+
+      <div class="bg-shell-white dark:bg-ocean-deep rounded-2xl shadow-xl overflow-hidden border border-sky-blue/50 dark:border-ocean-mid">
+        <ProjectTable client:load projectData={projectData} projectBaseUrl={projectBaseUrl} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-wave-blue/50 to-seafoam/50 dark:from-ocean-mid/70 dark:to-ocean-deep/70">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold text-ocean-deep dark:text-shell-white mb-6">Let's Dive In Together</h2>
+      <p class="text-lg text-ocean-mid dark:text-wave-blue mb-10">
+        I’m always excited to connect about marine innovation, engineering design, or applied math research. Let's explore the depths of possibility!
+      </p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="mailto:your.email@wesleyan.edu" class="bg-ocean-light hover:bg-wave-blue text-white px-8 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 shadow-md">
+          Email Me
+        </a>
+        <a href="https://github.com/your-username" class="bg-ocean-mid hover:bg-ocean-deep text-white px-8 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 shadow-md">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/your-profile" class="bg-lagoon hover:bg-coral-green text-white px-8 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 shadow-md">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
